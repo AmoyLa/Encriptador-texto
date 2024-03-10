@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script.js"></script>
+   <link rel="stylesheet" href="reset.css">  
+   <link rel="stylesheet" href="styles.css"> 
+  
+
+    <title>Encriptar</title>
+   
+       </head>
+        
+
+<body>
+             <header class="titulo">
+            <h1>Encriptador de textos</h1>
+           </header> 
+      <main>   
+
+            <section class="principal">   
+        
+                            <div class="logoDiv">
+                                <img src="imagenes/logo-alura.png" class="logo-alura" alt="logo-alura">
+                            </div>
+                        
+                            <div class="entrada">  
+                                <h2>"Acompáñame"</h2>
+                                <h3 >¡No se encripta en mayúscula,ni caracteres especiales!</h3>
+                                <input type="text" id="textoEncriptado"  class="entrada-datos" placeholder="Digite Aquí" >
+                        
+                            </div>
+                            
+                            <div class="copiar">
+                                <button type="button" id="bontonCopiar" class="btncopiar">Copiar</button>
+                            </div>
+                        
+
+                            <div class="botones">
+                            
+                                <button type="button" id="botonEncriptado" class="boton1">Encriptar</button>
+                                <button type="button" id="botonDesencritado" class="boton2">Desenpcritar</button> 
+                            </div> 
+
+                            <div class="resultados textarea" id="textoDesencriptado">
+                            <!--<textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" class="textarea"></textarea>-->   
+                            <img src="imagenes/lupa.svg" id="imagenOculta" class="imagen-lupa" > 
+                        </div>  
+            </section>  
+  </main> 
+        <script>
+                let  btn = document.querySelector("#botonEncriptado");
+                btn.onclick=encriptar;
+
+                let  btn2 = document.querySelector("#botonDesencritado");
+                btn2.onclick=desencriptar;
+
+                let  btn3 = document.querySelector("#bontonCopiar");
+                btn3.onclick=copiar;
+        
+                let btn4= document.querySelector("#botonDesencritado");
+                 btn4.onclick= desencriptar;
+        
+
+
+            </script>
+            
+        
+</body>
+
+</html>
