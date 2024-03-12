@@ -2,8 +2,24 @@
 
 
 function encriptar() {
+  let original = document.getElementById("textoEncriptado").value;
+
   let frase = document.getElementById("textoEncriptado").value.toLowerCase();
 
+  let caracteresEspacial = document.getElementById("textoEncriptado").value.replace(/[^a-zA-Z\s]/g,"");
+
+  if(original!=frase){
+    alert("¡No se acepta Mayúscula!");
+  }
+  else if(original!=caracteresEspacial){
+
+    alert("¡No se acepta caracteres espaciales!")
+  }
+
+
+  else{
+
+  
   let textoEncriptado = frase.replace(/e/g, "enter");
   textoEncriptado = textoEncriptado.replace(/i/g, "imes");
   textoEncriptado = textoEncriptado.replace(/a/g, "ai");
@@ -18,7 +34,11 @@ function encriptar() {
 
   // *******************Limpiar el input*******************************************************
   document.getElementById("textoEncriptado").value = "";
+ }
 }
+
+
+
 /************************************ FUNCIÓN COPIAR  DESENCRIPTAR*************************************************/ 
 
 function desencriptar() {
